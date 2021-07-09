@@ -28,7 +28,7 @@ This repository contains code for learning semantic manipulation of head CT-scan
 
 Please note that this code is developed to be run on my system and cannot be guaranteed to work on everywhere, so make sure to use a virtual environment to prevent any issues at first. This code can be used for semantic manipulation of CT scans, the code for pre-processing (registration and skull-stripping), as well as training segmentation networks can not be included as they are not open and not written by me. The default settings in this code may differ from the ones used in the paper.
 
-The current version is quickly adapted by removing private components of code. I will verify the package versions, default settings and confirm functionality of this code at later time. 
+The current version is quickly adapted by removing unnecessary private components from project. I will verify the package versions, default settings and confirm functionality of this code at later time. 
 
 ## Credit
 
