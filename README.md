@@ -4,15 +4,15 @@ This repository contains code for learning semantic manipulation of head CT-scan
 
 ## How to Run
 
-1. Install the required libraries, list below contains the important packages.
+1. Install the required libraries, list will be provided on this page later.
 2. Get dataset from https://physionet.org/content/ct-ich/1.3.1/. The data should have '[dataset root]/images' and '[dataset root]/label' folders with images after processing.
 3. Enter '[dataset root]' to 'create_ctich_split.py', 'experiment/train.sh', 'experiment/test.sh'. 
 4. Run 'create_ctich_split.py' and create a '[dataset root]/splits' folder with the resulting files.
 7. Navigate the to code root folder and run 'bash experiment/train.sh' to train the model.
 8. Navigate the to code root folder and run 'bash experiment/test.sh' to create dataset of synthetic CT-scans with hemorrhage removed.
 
+<!---
 ## Packages Used
-
 - numpy==1.16.6
 - opencv-python==4.2.0.32
 - Pillow==6.2.2
@@ -23,6 +23,7 @@ This repository contains code for learning semantic manipulation of head CT-scan
 - tensorboard-logger==0.1.0
 - torch==1.5.0
 - torchvision==0.5.0
+-->
 
 ## Limitations
 
