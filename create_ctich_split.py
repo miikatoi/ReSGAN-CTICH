@@ -1,3 +1,6 @@
+# This script creates files for n cross validiation splits and one testing split.
+# Split is done deterministically patientwise by circular enumeration.
+
 import pandas as pd
 import numpy as np
 import os
@@ -6,12 +9,12 @@ dataroot = ''
 annotation_filename = 'hemorrhage_diagnosis_raw_ct.csv'
 image_path = 'data/image'
 label_path = 'data/label'
-ignore_patientlist = [70]   # patient 70 is not ICH, it is better to leave out
+ignore_patientlist = [70]   # patient 70 is special case
+test_split_idx = 0          # use first split fot test
+n_splits = 6                # 5 splits for cross validation, 1 for testing
 
-# 5 splits for cross validation, 1 for testing
-splits_list = [1, 2, 3, 4, 5, 6]
-splits = [[], [], [], [], [], []]
-
+splits_list = list(range(n_splits))
+splits = [[]] * len(splits_list)
 
 def get_paths(df, patientlist):
     paths, labels, slices = [], [], []
@@ -49,7 +52,7 @@ for idx in range(len(ordered_patients)):
     splits[list_idx].append(ordered_patients[idx])
 
 # create test
-patientlist = splits[0]
+patientlist = splits[test_split_idx]
 fname = 'test_split.lst'
 save_to_file(fname, *get_paths(labels, patientlist))
 
