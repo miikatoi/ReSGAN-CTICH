@@ -2,7 +2,7 @@
 
 This repository contains code for learning semantic manipulation of head CT-scans as described in the paper ReSGAN: Intracranial Hemorrhage Segmentation with Residuals of Synthetic Brain CT Scans. 
 
-The current version is quickly adapted by removing private components from project. Requirements and running instructions will be added later.
+The current version is quickly adapted by removing private components from project.
 
 ## Credit
 
